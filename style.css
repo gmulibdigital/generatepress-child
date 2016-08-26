@@ -1,0 +1,195 @@
+/* 
+Theme Name:   GeneratePress Child
+ Description:  GeneratePress Child Theme
+ Author:       Jeri Wieringa
+ Template:     generatepress
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  generate-press-child
+ */
+
+body {
+	background-image: url("/wp-content/uploads/2015/07/MasonM_Rev.png");
+	background-repeat: no-repeat;
+}
+
+h4 {
+  font-weight: 700;
+}
+.inside-article, .comments-area, .page-header, .one-container .container, .paging-navigation, .inside-page-header {
+	background-color: rgba(255,255,255,.75);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+a:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.fa {
+	margin-right: 5px;
+}
+article {
+	display: block;
+	overflow: auto;
+	margin-bottom: 2em;
+}
+.hanging-indent p {
+	margin-left: 10px;
+	text-indent: -10px;
+}
+.featured-block {
+	margin: 1em 0 2em;
+	display: block;
+	overflow: auto;
+}
+.continue {
+	display: block;
+	margin-top: 1em;
+	font-weight: bold;
+}
+.footer-widgets li:before
+/*#right-sidebar li:before */{
+	content: "\00bb ";
+	margin-right: 5px;
+}
+
+aside .sharedaddy {
+	display: none;
+}
+.sidebar .widget.cat-post-widget {
+	font-size: 12px;
+}
+
+.sidebar .widget,
+	.inside-article,
+	.page-header {
+	background-color: initial;
+}
+#right-sidebar .widget_nav_menu {
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,.25);
+	box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+#right-sidebar .widget_nav_menu h4.widget-title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+aside .widget_nav_menu a h4:hover {
+	text-decoration: none;
+}
+aside .textwidget button {
+	background-color: #007b7c;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+aside .textwidget button:hover {
+	background-color: #0F9595; 
+}
+aside .textwidget button a {
+	color: white;
+}
+aside .genericon {
+	font-size: 32px;
+}
+.footer-widgets {
+	background-color: #333;
+	color: #E4E6D7;
+}
+
+.footer-widgets a:link, 
+	.footer-widgets a:visited {
+	color: #3EC2CF;
+}
+.footer-widgets a:hover, 
+	.footer-widgets a:focus {
+		color:#00909E;
+		
+	}
+.footer-widgets .widget-title {
+	color: #E4E6D7;
+}
+
+/* Home Page */
+.services {
+	min-height: 280px;
+}
+.callout-box {
+	padding: 1em;
+	font-size: 1.25em;
+}
+
+figcaption {
+	display: none;
+}
+
+figure:hover figcaption {
+	display:block;
+}
+/* Page Styles */
+.page-header h1 {
+	font-size: 40px;
+}
+
+/* Category Archive Styles */
+
+.archive article.category-workshops {
+	width: 45%;
+	display:inline-block;
+	margin-right: 2%;
+}
+.archive article.category-workshops .entry-content {
+	min-height: 200px;
+}
+.archive article.category-workshops header .entry-meta {
+	display: none;
+}
+
+/* Print Styles */
+@media print {
+	body { 
+		background: white; 
+		color: black; 
+		font: 12pt Georgia, "Times New Roman", Times, serif;
+		line-height: 1.3;
+		margin: 0 
+	}
+
+	.inside-header, 
+		nav, 
+		aside .menu,
+		.inside-navigation, 
+		.site-footer,
+		.sharedaddy,
+		.entry-meta,
+		.comments-area {
+		display: none;
+	}
+
+	#right-sidebar {
+		page-break-before: always;
+		width: 100%;
+		border-top: 1px solid #bbb;
+		display: block;
+	}
+
+	#right-sidebar img {
+		display: none;
+	}
+	
+	img {
+		max-width: 500px;
+	}
+	
+	p a:after {
+		content: " (" attr(href) ")";
+		font-size: 80%;
+	}
+
+}	
